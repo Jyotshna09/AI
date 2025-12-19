@@ -149,7 +149,7 @@ AlphaBeta(Node, Depth, α, β, IsMax)
 
 END AlphaBeta
 
-DecisionTree(Data)
+DecisionTree
 
     IF all data belongs to same class THEN
         RETURN class
