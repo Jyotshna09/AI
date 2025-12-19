@@ -149,3 +149,21 @@ AlphaBeta(Node, Depth, α, β, IsMax)
 
 END AlphaBeta
 
+DecisionTree(Data)
+
+    IF all data belongs to same class THEN
+        RETURN class
+    END IF
+
+    SELECT best attribute using information gain
+
+    CREATE decision node with selected attribute
+
+    FOR each value of attribute DO
+        SPLIT data
+        CALL DecisionTree(subset)
+    END FOR
+
+END DecisionTree
+
+
