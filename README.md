@@ -166,4 +166,24 @@ DecisionTree
 
 END DecisionTree
 
+CryptArithmetic(Word1, Word2, Result)
+
+    IDENTIFY all unique letters in the words
+    ASSIGN different digits (0–9) to each letter
+
+    ENSURE:
+        - No two letters have the same digit
+        - Leading letters are not assigned zero
+
+    FORM numbers by replacing letters with digits
+
+    IF Word1 + Word2 = Result THEN
+        PRINT "Solution Found"
+        PRINT digit assignment
+    ELSE
+        TRY another assignment
+    END IF
+
+END CryptArithmetic
+
 
