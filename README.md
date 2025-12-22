@@ -186,4 +186,22 @@ CryptArithmetic(Word1, Word2, Result)
 
 END CryptArithmetic
 
+NeuralNetwork(Inputs, Weights, Bias)
+
+    INITIALIZE weights and bias
+    READ input values
+
+    FOR each input DO
+        MULTIPLY input with corresponding weight
+    END FOR
+
+    COMPUTE weighted sum = Σ(input × weight) + bias
+
+    APPLY activation function on weighted sum
+
+    RETURN output
+
+END NeuralNetwork
+
+
 
