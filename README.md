@@ -57,12 +57,12 @@ Water Jug Problem
  WHILE Q is not empty DO
      CURRENT_STATE ← DEQUEUE Q
 
-    IF CURRENT_STATE satisfies goal condition THEN
+ IF CURRENT_STATE satisfies goal condition THEN
         PRINT "Goal Reached"
         STOP
     END IF
 
-    FOR each NEXT_STATE generated from CURRENT_STATE using valid operations DO
+ FOR each NEXT_STATE generated from CURRENT_STATE using valid operations DO
         IF NEXT_STATE not in Visited THEN
             ADD NEXT_STATE to Visited
             ENQUEUE NEXT_STATE into Q
