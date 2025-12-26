@@ -42,20 +42,34 @@ DFS(Graph, StartNode)
 END DFS
 
 Water Jug Problem
-     CREATE queue Q
-     CREATE set Visited
-    ENQUEUE (0,0)
-    ADD (0,0) to Visited
-    WHILE Q is not empty DO
-        (x,y) ← DEQUEUE Q
-        IF x = Target OR y = Target THEN
-            PRINT "Target Reached"
-            EXIT
+    CREATE empty set Visited
+ CREATE empty queue Q
+
+ DEFINE State as (x, y)
+     where x = amount of water in Jug A
+           y = amount of water in Jug B
+
+ INITIAL_STATE ← (0, 0)
+
+ ENQUEUE INITIAL_STATE into Q
+ ADD INITIAL_STATE to Visited
+
+ WHILE Q is not empty DO
+     CURRENT_STATE ← DEQUEUE Q
+
+    IF CURRENT_STATE satisfies goal condition THEN
+        PRINT "Goal Reached"
+        STOP
+    END IF
+
+    FOR each NEXT_STATE generated from CURRENT_STATE using valid operations DO
+        IF NEXT_STATE not in Visited THEN
+            ADD NEXT_STATE to Visited
+            ENQUEUE NEXT_STATE into Q
         END IF
-        GENERATE all possible next states
-        ADD unvisited states to queue
-    END WHILE
- END WaterJug
+    END FOR
+END WHILE
+
 
 UniformCostSearch(Graph, Start, Goal)
 
