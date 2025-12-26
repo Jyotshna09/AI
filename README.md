@@ -42,8 +42,8 @@ DFS(Graph, StartNode)
 END DFS
 
 Water Jug Problem
-    CREATE queue Q
-    CREATE set Visited
+     CREATE queue Q
+     CREATE set Visited
     ENQUEUE (0,0)
     ADD (0,0) to Visited
     WHILE Q is not empty DO
@@ -55,7 +55,7 @@ Water Jug Problem
         GENERATE all possible next states
         ADD unvisited states to queue
     END WHILE
-END WaterJug
+ END WaterJug
 
 UniformCostSearch(Graph, Start, Goal)
 
